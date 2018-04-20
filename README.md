@@ -42,9 +42,7 @@
 * Create tests for `Integer getNumberOfCats()`
  
 ### DogHouseTest
-* Create tests for `new Dog(String name, Date birthDate, Integer id)`
-* Create tests for `setBirthDate(Date birthDate)`
-* Create tests for `void eat(Food food)`
-* Create tests for `Integer getId()`
-* Create test to check Animal inheritance; google search `java instanceof keyword`
-* Create test to check Mammal inheritance; google search `java instanceof keyword`
+* Create tests for `void add(Dog dog)`
+* Create tests for `void remove(Integer id)`
+* Create tests for `void remove(Dog dog)`
+* Create tests for `Dog getDogById(Integer id)`
