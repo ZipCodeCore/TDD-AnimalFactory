@@ -55,7 +55,9 @@
 
 ### CatHouseTest
 #### `void add(Cat cat)`
-* ensure that when `.add` is invoked on the `CatHouse`, a respective `Cat` object can be retrieved from the house.  
+
+* ensure that when `.add` is invoked on the `CatHouse`, a respective `Cat` object can be retrieved from the house.
+  
 #### `void remove(Cat cat)`
 * ensure that when `.remove` is invoked on the `CatHouse`, a respective `Cat` object can no longer be retrieved from the house.
 #### `void remove(Integer id)`
