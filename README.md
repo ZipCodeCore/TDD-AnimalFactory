@@ -16,6 +16,7 @@
 
 ### CatTest
 #### `void setName(String name)`
+
 * ensure that when `.setName` is invoked on an instance of `Cat`, the `name` field is being set to the respective value.
 
 #### `String speak()`
