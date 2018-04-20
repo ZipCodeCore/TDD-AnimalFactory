@@ -28,4 +28,8 @@ public class CatHouse {
     public static Integer getNumberOfCats() {
         return catHouse.getNumberOfAnimals();
     }
+
+    public static void clear() {
+        catHouse.clear();
+    }
 }

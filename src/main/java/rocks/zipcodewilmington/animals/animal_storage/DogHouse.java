@@ -27,4 +27,8 @@ public class DogHouse {
     public static Integer getNumberOfDogs() {
         return dogHouse.getNumberOfAnimals();
     }
+
+    public static void clear() {
+        dogHouse.clear();
+    }
 }
