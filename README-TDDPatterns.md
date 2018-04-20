@@ -1,6 +1,8 @@
 # Test Driven Development (TDD)
 ## What is a unit test?
-* A unit test is a software testing practice by which individual units of code are tested to determine whether they are fit for use.
+* A `unit test` is a practice by which `small units of code` are tested.
+* The purpose of the unit test is to determine if the feature being tested is fit for use in other parts of the application.
+* It is considered best practice to test every method in an application with at least 2 sets of arguments.
 * Tests are typically expressed as a combination of three clauses:
 	* `Given` some context
 	* `When` some action is carried out
