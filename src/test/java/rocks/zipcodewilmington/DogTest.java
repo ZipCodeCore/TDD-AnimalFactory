@@ -8,7 +8,7 @@ import rocks.zipcodewilmington.animals.Dog;
  * @author leon on 4/19/18.
  */
 public class DogTest {
-    // TODO - Create tests for `void setName(String name)`
+    // TODO - Create tests for `new Dog(String name, Date birthDate, Integer id)`
     // TODO - Create tests for `setBirthDate(Date birthDate)`
     // TODO - Create tests for `void eat(Food food)`
     // TODO - Create tests for `Integer getId()`
