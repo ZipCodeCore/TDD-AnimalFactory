@@ -74,6 +74,6 @@
     * ensure that when `.remove` is invoked on the `DogHouse`, a `Dog` object with the respective `id` can no longer be retrieved from the house.
 * Create tests for `Dog getDogById(Integer id)`
     * ensure that when `.getCatById` is invoked on the `DogHouse`, a `Dog` with the respective `id` is returned.
-* Create tests for `Integer getNumberOfCats()`
-    * ensure that when `.getNumberOfCats()` is invoked on the `DogHouse`, the respective number of `Dog` objects is returned.
+* Create tests for `Integer getNumberOfDogs()`
+    * ensure that when `.getNumberOfDogs()` is invoked on the `DogHouse`, the respective number of `Dog` objects is returned.
 
