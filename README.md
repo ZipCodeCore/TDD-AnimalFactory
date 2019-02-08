@@ -9,7 +9,7 @@
 * **Purpose:**
     * To establish familiarity with Test-Driven-Development (TDD) practices.
 * **Getting context:**
-	* Click [here](./README-TDDPatterns.md) to gain more familiarity with TDD-structured programming.
+	* Click [here](https://github.com/Zipcoder/TDD-AnimalFactory/blob/master/README-TDDPatterns.md) to gain more familiarity with TDD-structured programming.
 
 ## Getting Started
 * Begin by opening the project via its `pom.xml` with IntelliJ.
