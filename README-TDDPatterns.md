@@ -42,7 +42,7 @@ Person leon = new Person(name, age);
 
 ### When (some action is carried out)
 * `When` is the section of a unit test method that
-	* invokes the method with the arranged parameters
+	* invokes the method with the previously arranged parameters
 
 ```java
 // When
