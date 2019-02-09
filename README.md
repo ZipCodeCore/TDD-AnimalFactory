@@ -13,7 +13,7 @@
 
 ## Getting Started
 * Begin by opening the project via its `pom.xml` with IntelliJ.
-    * [How do I install IntelliJ](./README-InstallingIntellij.md)?
+    * [How do I install IntelliJ](https://github.com/Zipcoder/Maven.TDD-AnimalFactory/blob/master/README-InstallingIntelliJ.md)?
 * Continue by opening the `test.java.rocks.zipcodewilmington` package and completing each of the `TODO`s.
 
 ### CatTest
