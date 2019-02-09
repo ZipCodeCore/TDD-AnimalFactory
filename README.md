@@ -22,7 +22,7 @@
 * Create tests for `String speak()`
     * ensure that when `.speak` is invoked on an instance of `Cat`, the value `"meow!"` is returned.
 * Create tests for `setBirthDate(Date birthDate)`
-    * ensure that when `.setBirthDate` is invoked on an instance of `Cat`, the `name` field is being set to the respective value.
+    * ensure that when `.setBirthDate` is invoked on an instance of `Cat`, the `birthDate` field is being set to the respective value.
 * Create tests for `void eat(Food food)`
     * ensure that when `.eat` is invoked on an instance of `Cat`, the `numberOfMealsEaten` is increased by 1.
 * Create tests for `Integer getId()`
@@ -38,7 +38,7 @@
 * Create tests for `String speak()`
     * ensure that when `.speak` is invoked on an instance of `Dog`, the value `"bark!"` is returned.
 * Create tests for `setBirthDate(Date birthDate)`
-    * ensure that when `.setBirthDate` is invoked on an instance of `Dog`, the `name` field is being set to the respective value.
+    * ensure that when `.setBirthDate` is invoked on an instance of `Dog`, the `birthDate` field is being set to the respective value.
 * Create tests for `void eat(Food food)`
     * ensure that when `.eat` is invoked on an instance of `Dog`, the `numberOfMealsEaten` is increased by 1.
 * Create tests for `Integer getId()`
