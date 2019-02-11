@@ -12,6 +12,8 @@ import java.util.Date;
  * @author leon on 4/19/18.
  */
 public class DogHouseTest {
+    private DogHouse dogHouseTest;
+    Dog dogExpeced = new Dog("x",new Date(1),15);
 
     // TODO - Create tests for `void add(Dog dog)`
     @Test
@@ -37,13 +39,61 @@ public class DogHouseTest {
     // TODO - Create tests for `void remove(Integer id)`
     @Test
     public void testRemoveById() {
-        
+
+    //Given
+    Dog dogToRemove = new Dog("Y", new Date(), 99);
+    dogHouseTest.add(dogToRemove)  ;
+
+
+    // when
+        dogHouseTest.remove(99);
+
+    // then
+    Dog dogActual = dogHouseTest.getDogById(99);
+        Assert.assertNull(dogActual);
+
     }
 
     // TODO - Create tests for `void remove(Dog dog)`
-    // TODO - Create tests for `Dog getDogById(Integer id)`
-    // TODO - Create tests for `Integer getNumberOfDogs()`
+    @Test
+    public void testRemoveObject(){
+        // Given
+        Dog dogToRemove = new Dog("byeBYe doggie", new Date(30),100);
+        dogHouseTest.add(dogToRemove);
 
+        // When
+        dogHouseTest.remove(dogToRemove);
+
+        // Then
+        Dog dogActual = dogHouseTest.getDogById(100);
+        Assert.assertNull(dogActual);
+
+    }
+
+    // TODO - Create tests for `Dog getDogById(Integer id)`
+    @Test
+    public void testGetDogById() {
+        // Given
+        String expectedName = "Getting by ID";
+        Integer expectedID = 98;
+        Dog dogbyId = new Dog(expectedName, new Date(), expectedID);
+        dogHouseTest.add(dogbyId);
+
+        // When
+        Dog actualDog = dogHouseTest.getDogById(expectedID);
+
+        // then
+        String actualName = actualDog.getName();
+        Integer actualint = actualDog.getId();
+
+        Assert.assertEquals(actualName,expectedName);
+        Assert.assertEquals(actualint,expectedID);
+
+
+    }
+
+
+    // TODO - Create tests for `Integer getNumberOfDogs()`
     @Test
     public void testGetNumberOfDogs() {
         // Given (some
