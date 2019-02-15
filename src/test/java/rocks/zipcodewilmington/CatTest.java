@@ -70,6 +70,7 @@ public class CatTest {
         int initialMealsEaten = cat.getNumberOfMealsEaten();
         int expected = initialMealsEaten + 1;
 
+
         // when
         cat.eat(food);
         int actual = cat.getNumberOfMealsEaten();
