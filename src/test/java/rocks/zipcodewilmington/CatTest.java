@@ -123,7 +123,7 @@ public class CatTest {
         Integer retrievedId = cat.getId();
 
         // Then (we expect the given data, to match the retrieved data)
-        Assert.assertEquals(givenName, retrievedName);
+        Assert.assertEquals(givenName, retrievedName); //
         Assert.assertEquals(givenBirthDate, retrievedBirthDate);
         Assert.assertEquals(givenId, retrievedId);
     }
