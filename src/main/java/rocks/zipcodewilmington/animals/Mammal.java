@@ -9,6 +9,7 @@ import java.util.Date;
  * @author leon on 4/19/18.
  */
 public abstract class Mammal implements Animal {
+
     private final Integer id;
     private ArrayList<Food> eatenMeals;
     private String name;
