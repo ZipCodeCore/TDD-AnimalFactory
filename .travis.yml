@@ -1,9 +1,0 @@
-sudo: false
-language: java
-
-deploy:
-  provider: script
-  script: "mvn test"
-  skip_cleanup: true
-  on:
-tags: true
