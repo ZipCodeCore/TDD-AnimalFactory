@@ -10,8 +10,8 @@ import java.util.Date;
  * @author leon on 4/19/18.
  */
 public class CatTest {
-    // TODO - Create tests for `void setName(String name)`
-    // TODO - Create tests for `speak` - done
+    // TODO - Create tests for `void setName(String name)` - ********
+    // TODO - Create tests for `speak` - *******
     // TODO - Create tests for `setBirthDate(Date birthDate)`
     // TODO - Create tests for `void eat(Food food)`
     // TODO - Create tests for `Integer getId()`
@@ -42,10 +42,20 @@ public class CatTest {
 
     @Test
     public void speakTest(){
-        Cat testCat = new Cat("Ziggy",new Date(),0);
+        Cat testCat = new Cat ("Ziggy",new Date(),0);
         String expected = "meow!";
         String actual = testCat.speak();
 
         Assert.assertEquals(expected,actual);
     }
+
+    @Test
+    public void setNameTest(){
+        Cat testCat = new Cat("", new Date(),0);
+        String expected = "Jordan";
+        testCat.setName(expected);
+
+        Assert.assertEquals(expected,testCat.getName());
+    }
+
 }
