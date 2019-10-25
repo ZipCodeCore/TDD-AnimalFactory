@@ -10,6 +10,22 @@ import java.util.Date;
  * @author leon on 4/19/18.
  */
 public class CatTest {
+
+    @Test
+    public void testSetName()   {
+        Cat cat = new Cat();
+        String expected = "Mr. Cat";
+
+        cat.setName(expected);
+        String actual = cat.getName();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetBirthDate()  {
+
+    }
     // TODO - Create tests for `void setName(String name)`
     // TODO - Create tests for `speak`
     // TODO - Create tests for `setBirthDate(Date birthDate)`
