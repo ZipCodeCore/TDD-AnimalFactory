@@ -44,6 +44,7 @@ public abstract class Mammal implements Animal {
 
     public void eat(Food food) {
         eatenMeals.add(food);
+
     }
 
     @Override
