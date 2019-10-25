@@ -2,7 +2,10 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
+
+import java.util.Date;
 
 /**
  * @author leon on 4/19/18.
@@ -27,5 +30,44 @@ public class DogTest {
         // Then (we expect to get the given name from the dog)
         String dogName = dog.getName();
         Assert.assertEquals(dogName, givenName);
+    }
+
+    @Test
+    public void setBirthDateTest(){
+        String givenName = "Taco";
+        Date givenBirthDate = new Date();
+        Integer givenId = 0;
+
+        Dog dog = new Dog(null, givenBirthDate,null);
+        Date retrivedBirthDate = dog.getBirthDate();
+
+        Assert.assertEquals(givenBirthDate,retrivedBirthDate);
+    }
+    @Test
+    public void speakTest(){
+        Dog dog = new Dog(null, null, null);
+
+
+        String expected = "bark!";
+        String actual = dog.speak();
+        Assert.assertEquals(expected,actual);
+    }
+    @Test
+    public void eatTest() {
+        Dog dog = new Dog(null, null, null);
+
+        int expected = dog.getNumberOfMealsEaten() ;
+        dog.eat(new Food());
+        int actual = dog.getNumberOfMealsEaten()    ;
+        Assert.assertEquals(expected + 1, actual );
+    }
+    @Test
+    public void getIdTest() {
+        Integer givenId = 0;
+
+        Dog dog = new Dog(null, null, givenId);
+
+        Integer retrieveId = dog.getId();
+        Assert.assertEquals(givenId, retrieveId);
     }
 }
