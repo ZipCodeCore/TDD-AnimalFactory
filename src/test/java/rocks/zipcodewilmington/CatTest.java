@@ -58,4 +58,12 @@ public class CatTest {
         Assert.assertEquals(expected,testCat.getName());
     }
 
+    @Test
+    public void setBirthDateTest() {
+        Cat testCat = new Cat("", new Date(), 0);
+        Date expected = new Date(4);
+        testCat.setBirthDate(expected);
+
+        Assert.assertEquals(expected,testCat.getBirthDate());
+    }
 }
