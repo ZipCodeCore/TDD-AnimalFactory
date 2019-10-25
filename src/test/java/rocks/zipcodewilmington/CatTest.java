@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Cat;
+import rocks.zipcodewilmington.animals.Mammal;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -72,8 +73,13 @@ public class CatTest {
         Cat cat = new Cat("Maira", new Date(4), 1);
         boolean actual = cat instanceof Animal;
         Assert.assertEquals(true, actual);
+    }
 
-
+    @Test
+    public void testIsInstanceOfMammal()    {
+        Cat cat = new Cat("Maira", new Date(4), 1);
+        boolean actual = cat instanceof Mammal;
+        Assert.assertEquals(true, actual);
     }
 
 
