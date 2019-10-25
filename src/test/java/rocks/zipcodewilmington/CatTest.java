@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class CatTest {
     // TODO - Create tests for `void setName(String name)`
-    // TODO - Create tests for `speak`
+    // TODO - Create tests for `speak` - done
     // TODO - Create tests for `setBirthDate(Date birthDate)`
     // TODO - Create tests for `void eat(Food food)`
     // TODO - Create tests for `Integer getId()`
@@ -40,4 +40,12 @@ public class CatTest {
         Assert.assertEquals(givenId, retrievedId);
     }
 
+    @Test
+    public void speakTest(){
+        Cat testCat = new Cat("Ziggy",new Date(),0);
+        String expected = "meow!";
+        String actual = testCat.speak();
+
+        Assert.assertEquals(expected,actual);
+    }
 }
