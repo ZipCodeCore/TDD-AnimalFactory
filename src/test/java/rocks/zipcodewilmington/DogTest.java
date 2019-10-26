@@ -2,6 +2,7 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.experimental.theories.suppliers.TestedOn;
 import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Dog;
 import rocks.zipcodewilmington.animals.Mammal;
@@ -31,6 +32,29 @@ public class DogTest {
         // Then (we expect to get the given name from the dog)
         String dogName = dog.getName();
         Assert.assertEquals(dogName, givenName);
+    }
+
+    @Test
+    public void speakTest(){
+        Dog testDog = new Dog ("Barfy",new Date(),0);
+        String expected = "bark!";
+
+        Assert.assertEquals(expected,testDog.speak());
+    }
+
+    @Test
+    public void setBirthDateTest(){
+        Dog testDog = new Dog ("Barfy",new Date(),0);
+    }
+
+    @Test
+    public void eatTest(){
+        Dog testDog = new Dog ("Barfy",new Date(),0);
+    }
+
+    @Test
+    public void getIdTest(){
+        Dog testDog = new Dog ("Barfy",new Date(),0);
     }
 
     @Test
