@@ -24,53 +24,46 @@ public class CatHouseTest {
     // TODO - Create tests for `Integer getNumberOfCats()`
 
 
-@Before
-public void setUp() {
+    @Before
+    public void setUp() {
 
-}
+    }
 
-@After
-    public void tearDown()  {
+    @After
+    public void tearDown() {
+    CatHouse.clear();
+    }
 
-}
-
- void testAddCat()  {
-    CatHouse catHut = new CatHouse();
-    Cat cat2 = new Cat("tom", new Date(), 2);
-    catHut.add(cat2);
-    Cat expected = cat2;
-    Cat actual = catHut.getCatById(2);
-    Assert.assertEquals(expected, actual);
-}
-
-
-@Test
-    public void testRemoveCat()  {
-    CatHouse catHut = new CatHouse();
-    Cat cat1 = new Cat("Sheila", new Date(), 2);
-    Cat cat2 = new Cat("Bob", new Date(), 4);
-    catHut.add(cat1);
-    catHut.add(cat2);
-    catHut.remove(cat2);
-    Integer expected = 1;
-    Integer actual = catHut.getNumberOfCats();
-    Assert.assertEquals(expected, actual);
-}
-
-@Test
-    public void testGetCatById()    {
-    CatHouse catHut = new CatHouse();
-    Cat cat3 = new Cat("simon", new Date(), 4);
-    catHut.add(cat3);
-    Cat expected = cat3;
-    Cat actual = catHut.getCatById(4);
-    Assert.assertEquals(expected, actual);
+    @Test
+    public void testAddCat() {
+        Cat cat3 = new Cat("tom", new Date(), 2);
+        CatHouse.add(cat3);
+        Cat expected = cat3;
+        Cat actual = CatHouse.getCatById(2);
+        Assert.assertEquals(expected, actual);
+    }
 
 
+    @Test
+    public void testRemoveCat() {
+        Cat cat1 = new Cat("Sheila", new Date(), 2);
+        Cat cat2 = new Cat("Bob", new Date(), 4);
+        CatHouse.add(cat1);
+        CatHouse.add(cat2);
+        CatHouse.remove(cat2);
+        Integer expected = 1;
+        Integer actual = CatHouse.getNumberOfCats();
+        Assert.assertEquals(expected, actual);
+    }
 
-
-
-
+    @Test
+    public void testGetCatById() {
+        Cat cat3 = new Cat("simon", new Date(), 4);
+        CatHouse.add(cat3);
+        Cat expected = cat3;
+        Cat actual = CatHouse.getCatById(4);
+        Assert.assertEquals(expected, actual);
+    }
 
 
 }
@@ -88,4 +81,4 @@ public void setUp() {
 
 
 
-}
+
