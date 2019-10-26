@@ -90,7 +90,6 @@ public class CatTest {
     @Test
     public void animalInheritanceTest(){
         Cat testCat = new Cat("Ziggy",new Date(),0);
-        boolean instanceOfAnimal = false;
         boolean expected = true;
         boolean actual = testCat instanceof Animal;
 
@@ -100,7 +99,6 @@ public class CatTest {
     @Test
     public void mammalInheritanceTest(){
         Cat testCat = new Cat("Ziggy",new Date(),0);
-        boolean instanceOfAnimal = false;
         boolean expected = true;
         boolean actual = testCat instanceof Mammal;
 

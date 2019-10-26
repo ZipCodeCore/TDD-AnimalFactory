@@ -74,7 +74,6 @@ public class DogTest {
     @Test
     public void animalInheritanceTest(){
         Dog testDog = new Dog ("Barfy",new Date(),0);
-        boolean instanceOfAnimal = false;
         boolean expected = true;
         boolean actual = testDog instanceof Animal;
 
@@ -84,7 +83,6 @@ public class DogTest {
     @Test
     public void mammalInheritanceTest(){
         Dog testDog = new Dog("Ziggy",new Date(),0);
-        boolean instanceOfAnimal = false;
         boolean expected = true;
         boolean actual = testDog instanceof Mammal;
 
