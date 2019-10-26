@@ -26,11 +26,16 @@ public class DogHouseTest {
         Dog animal = AnimalFactory.createDog(name, birthDate);
         DogHouse.clear();
 
+        int expectedNumberOfDogs = 1;
+        int actualNumberOfDogs = 0;
+
         // When
         DogHouse.add(animal);
 
         // Then
-        DogHouse.getNumberOfDogs();
+        actualNumberOfDogs = DogHouse.getNumberOfDogs();
+
+        Assert.assertEquals(expectedNumberOfDogs,actualNumberOfDogs);
     }
 
     @Test
