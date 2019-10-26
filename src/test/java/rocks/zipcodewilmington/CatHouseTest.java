@@ -38,12 +38,46 @@ public class CatHouseTest {
 
     @Test
     public void removeCaTByIdTest(){
+        String catName = "Tigger";
+        Date birthDate = new Date();
+        Cat testCat = new Cat(catName,birthDate,0);
+
+        int expected = 0;
+        int actual = 7;
+        int catId = 9;
+
+        // reset and add a cat
+        CatHouse.clear();
+        CatHouse.add(testCat);
+
+        // remove the added cat by id
+        catId = testCat.getId();
+        CatHouse.remove(catId);
+
+        actual = CatHouse.getNumberOfCats();
+
+        Assert.assertEquals(expected,actual);
 
     }
 
     @Test
     public void removeCatTest(){
+        String catName = "Tigger";
+        Date birthDate = new Date();
+        Cat testCat = new Cat(catName,birthDate,0);
 
+        int expected = 0;
+        int actual = 9;
+
+        // reset and add cat
+        CatHouse.clear();
+        CatHouse.add(testCat);
+
+        // remove the added cat
+        CatHouse.remove(testCat);
+        actual = CatHouse.getNumberOfCats();
+
+        Assert.assertEquals(expected,actual);
     }
 
     @Test
