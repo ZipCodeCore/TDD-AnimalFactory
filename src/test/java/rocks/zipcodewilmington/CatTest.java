@@ -2,7 +2,9 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Cat;
+import rocks.zipcodewilmington.animals.Mammal;
 
 import java.util.Date;
 
@@ -40,4 +42,64 @@ public class CatTest {
         Assert.assertEquals(givenId, retrievedId);
     }
 
+    @Test
+    public void setNameTest() {
+        Cat cat = new Cat(null, null, null);
+        String expected = "dude";
+        cat.setName(expected);
+        Assert.assertEquals(expected, cat.getName());
+
+    }
+
+    @Test
+    public void setBirthDateTest() {
+        Cat cat = new Cat(null, null, null);
+        Date expected = new Date();
+        cat.setBirthDate(expected);
+        Assert.assertEquals(expected, cat.getBirthDate());
+    }
+
+    @Test
+    public void speakTest() {
+        Cat cat = new Cat(null, null, null);
+        String expected = "meow!";
+        Assert.assertEquals(expected, cat.speak());
+    }
+
+    @Test
+    public void eatTest() {
+
+        //given data
+        Cat cat = new Cat(null, null, null);
+        //cat.getNumberOfMealsEaten();
+
+        //when
+        Integer expected = cat.getNumberOfMealsEaten()+1;
+
+        //action
+        cat.eat(new Food());
+
+        Assert.assertEquals(expected, cat.getNumberOfMealsEaten());
+    }
+
+    @Test
+    public void getIDTest(){
+        Integer expected = 25;
+        Cat cat = new Cat(null, null, expected);
+
+        Assert.assertEquals(expected, cat.getId());
+    }
+    @Test
+    public void isAMammalTest(){
+        Cat cat = new Cat(null, null, null);
+        Boolean expected = true;
+        Assert.assertEquals(cat instanceof Mammal, expected);
+    }
+    @Test
+    public void isAnAnimalTest(){
+        Cat cat = new Cat(null, null, null);
+        Boolean expected = true;
+        Assert.assertEquals(cat instanceof Animal, expected);
+
+    }
 }
