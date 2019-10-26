@@ -53,7 +53,7 @@ public class DogHouseTest {
     }
 
     @Test
-    public void removeIdTest() {
+    public void removeDogByIdTest() {
         String dogName = "Barf";
         Date birthDate = new Date();
         Dog testDog = AnimalFactory.createDog(dogName,birthDate);
@@ -77,5 +77,24 @@ public class DogHouseTest {
 
     }
 
+    @Test
+    public void removeDogTest() {
+        String dogName = "Barf";
+        Date birthDate = new Date(4);
+        Dog testDog = AnimalFactory.createDog(dogName, birthDate);
 
+        int expectedNumberOfDogs = 0;
+        int actualNumberOfDogs = 9;
+
+        // reset
+        DogHouse.clear();
+        // add the newly created dog
+        DogHouse.add(testDog);
+
+        // remove added dog
+        DogHouse.remove(testDog);
+        actualNumberOfDogs = DogHouse.getNumberOfDogs();
+
+        Assert.assertEquals(expectedNumberOfDogs,actualNumberOfDogs);
+    }
 }
