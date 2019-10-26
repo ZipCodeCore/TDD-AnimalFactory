@@ -55,11 +55,19 @@ public class DogTest {
     @Test
     public void eatTest(){
         Dog testDog = new Dog ("Barfy",new Date(),0);
+
     }
 
     @Test
     public void getIdTest(){
         Dog testDog = new Dog ("Barfy",new Date(),0);
+        Food someFood = new Food();
+        int expected = 1;
+
+        testDog.eat(someFood);
+        int actual = testDog.getNumberOfMealsEaten();
+
+        Assert.assertEquals(expected,actual);
     }
 
     @Test
