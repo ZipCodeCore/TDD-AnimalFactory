@@ -82,7 +82,22 @@ public class CatHouseTest {
 
     @Test
     public void getCatByIdTest(){
+        String catName = "Tigger";
+        Date birthDate = new Date();
+        Cat testCat = new Cat(catName,birthDate,33);
 
+        boolean expected = true;
+        boolean actual = false;
+        int catId = 9;
+
+        // reset and add cat
+        CatHouse.clear();
+        CatHouse.add(testCat);
+
+        catId = testCat.getId();
+        actual = CatHouse.getCatById(catId) != null;
+
+        Assert.assertEquals(expected,actual);
     }
 
     @Test
