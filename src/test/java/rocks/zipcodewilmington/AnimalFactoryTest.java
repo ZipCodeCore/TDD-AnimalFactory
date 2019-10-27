@@ -5,6 +5,8 @@ import rocks.zipcodewilmington.animals.*;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.animal_creation.AnimalFactory;
+
 import java.util.Date;
 import java.util.Calendar;
 
@@ -22,12 +24,12 @@ public class AnimalFactoryTest
         // Given
         String expectedName = "Doggy1";
         Date expectedBirthDate = new Date();
-        Integer expectedId = 1;
+        Integer expectedId = 0;
 
 
         // When
 
-        Dog dog1 = new Dog(expectedName, expectedBirthDate, expectedId);
+        Dog dog1 = AnimalFactory.createDog(expectedName, expectedBirthDate);
 
         // Then
         String actualName = dog1.getName();
@@ -46,10 +48,10 @@ public class AnimalFactoryTest
         // Given
         String expectedName = "catmeow";
         Date expectedBirthDate = new Date();
-        Integer expectedId = 5;
+       Integer expectedId = 0;
 
         // When
-        Cat cat1 = new Cat(expectedName, expectedBirthDate, expectedId);
+        Cat cat1 = AnimalFactory.createCat(expectedName, expectedBirthDate);
 
         // Then
         String actualName = cat1.getName();
