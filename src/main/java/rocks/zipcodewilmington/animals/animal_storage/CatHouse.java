@@ -32,4 +32,9 @@ public class CatHouse {
     public static void clear() {
         catHouse.clear();
     }
+
+    public static Cat getAnimalById(int i) {
+        return null;
+    }
+
 }
