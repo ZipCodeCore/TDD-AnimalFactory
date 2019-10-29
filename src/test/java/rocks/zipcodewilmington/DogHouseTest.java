@@ -16,18 +16,34 @@ public class DogHouseTest {
     // TODO - Create tests for `Integer getNumberOfDogs()`
 
     @Test
-    public void getNumberOfDogs() {
-        int idOfDog = 0;
-        Dog inputDog = new Dog("Fluffer", new Date(), idOfDog);
-        Dog expectedDog = null;
-        DogHouse.add(inputDog);
+    public void testGetNumberOfDogs() {
+        //given
+        String name = "";
+        Date birthDate = new Date();
+        Dog animal = AnimalFactory.createDog(name, birthDate);
+        DogHouse.clear();
+        //when
+        DogHouse.add(animal);
+        //then
+        DogHouse.getNumberOfDogs();
     }
 
+    @Test
+    public void testaddDog() {
+        //given
+        DogHouse dogehouse = new DogHouse();
+        Dog dog = new Dog("Persin", new Date(10), 2);
+        //when
+        dogehouse.add(dog);
+        Dog actual = dogehouse.getDogById(2);
+        //then
+        Assert.assertEquals(dog, actual);
+    }
 
     @Test
     public void testRemoveDogName1() {
         // given
-        int idOfDog = 0;
+        int idOfDog = 3;
         Dog inputDog = new Dog("Fluffy", new Date(), idOfDog);
         Dog expectedDog = null;
         DogHouse.add(inputDog);
@@ -62,7 +78,7 @@ public class DogHouseTest {
     public void testRemoveMethod1() {
         // given
         DogHouse house = new DogHouse();
-        int idOfDog = 0;
+        int idOfDog = 5;
         Dog inputDog = new Dog("", new Date(), idOfDog);
         Dog expectedDog = null;
         house.add(inputDog);
@@ -91,8 +107,5 @@ public class DogHouseTest {
 
         // then
         Assert.assertEquals(expectedDog, actualDog);
-    }
-
-
     }
 }
