@@ -1,5 +1,6 @@
 package rocks.zipcodewilmington.animals;
 
+
 import java.util.Date;
 
 /**
