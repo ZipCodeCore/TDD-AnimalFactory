@@ -31,11 +31,11 @@ public class DogHouseTest {
     @Test
     public void testaddDog() {
         //given
-        DogHouse dogehouse = new DogHouse();
+        DogHouse doghouse = new DogHouse();
         Dog dog = new Dog("Persin", new Date(10), 2);
         //when
-        dogehouse.add(dog);
-        Dog actual = dogehouse.getDogById(2);
+        doghouse.add(dog);
+        Dog actual = doghouse.getDogById(2);
         //then
         Assert.assertEquals(dog, actual);
     }
