@@ -1,5 +1,6 @@
 package rocks.zipcodewilmington;
 
+import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Dog;
 import rocks.zipcodewilmington.animals.animal_creation.AnimalFactory;
@@ -18,17 +19,60 @@ public class DogHouseTest {
     // TODO - Create tests for `Integer getNumberOfDogs()`
 
     @Test
-    public void testGetNumberOfDogs() {
-        // Given (some
-        String name = "Milo";
+    public void TestRemoveInt() {
+        String name = "Gizmo";
         Date birthDate = new Date();
         Dog animal = AnimalFactory.createDog(name, birthDate);
         DogHouse.clear();
-
-        // When
         DogHouse.add(animal);
+        DogHouse.remove(1);
+        Assert.assertNull(DogHouse.getDogById(1));
+    }
 
-        // Then
-        DogHouse.getNumberOfDogs();
+    @Test
+    public void TestRemoveDog() {
+        String name = "Gizmo";
+        Date birthDate = new Date();
+        Dog animal = AnimalFactory.createDog(name, birthDate);
+        DogHouse.clear();
+        DogHouse.add(animal);
+        DogHouse.remove(animal);
+        Assert.assertNull(DogHouse.getDogById(1));
+    }
+
+
+    @Test
+    public void TestGetDogById() {
+        String name = "Gizmo";
+        Date birthDate = new Date();
+        Dog animal = AnimalFactory.createDog(name, birthDate);
+        DogHouse.clear();
+        DogHouse.add(animal);
+        Dog expected = animal;
+        Dog actual = DogHouse.getDogById(1);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void TestGetNumberOfDogs() {
+        String name = "Gizmo";
+        Date birthDate = new Date();
+        Dog animal = AnimalFactory.createDog(name, birthDate);
+        DogHouse.clear();
+        DogHouse.add(animal);
+        Integer expected = 1;
+        Integer actual = DogHouse.getNumberOfDogs();
+        Assert.assertEquals(expected, actual);
+    }
+
+    // Not sure how this could be different than either getNumberOfDogs or getDogByID?
+    @Test
+    public void TestAdd() {
+        String name = "Gizmo";
+        Date birthDate = new Date();
+        Dog animal = AnimalFactory.createDog(name, birthDate);
+        DogHouse.clear();
+        DogHouse.add(animal);
+        Assert.assertEquals(new Integer(1), DogHouse.getNumberOfDogs());
     }
 }
