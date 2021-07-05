@@ -2,10 +2,14 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Animal;
+import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
+import rocks.zipcodewilmington.animals.Mammal;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -62,11 +66,38 @@ public class DogTest {
     @Test
     public void testIntegerGetId(){
         //given
-        Dog dog = new Dog(null,null,null);
-        int expectedId = 1;
+        Dog dog = new Dog(null,null,1);
+        Integer expectedId = 1;
+
         //when
 
         //then
-        Assert.assertEquals(expectedId,);
+        Assert.assertEquals(expectedId,dog.getId());
+    }
+
+    @Test
+    public void testEat(){
+        //given
+        ArrayList<Food> eatenMeals = new ArrayList<>();
+        Integer expected=2;
+        Dog dog = new Dog(null,null,null);
+        Food food =new Food();
+
+        //when
+        dog.eat(food);
+        dog.eat(food);
+        //then
+        Assert.assertEquals(expected,dog.getNumberOfMealsEaten());
+    }
+    @Test
+    public void animalInheritanceTest(){
+        Dog dog = new Dog(null, null , null);
+        Assert.assertTrue(dog instanceof Animal);
+    }
+    @Test
+    public void mammalInheritanceTest(){
+        Dog dog = new Dog(null, null , null);
+        Assert.assertTrue(dog instanceof Mammal);
     }
 }
+
