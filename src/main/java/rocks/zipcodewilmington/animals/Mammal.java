@@ -12,7 +12,14 @@ public abstract class Mammal implements Animal {
     private final Integer id;
     private ArrayList<Food> eatenMeals;
     private String name;
-    private Date birthDate;
+    private Date birthDate; //Does this need to be private or protected?
+
+   public Mammal(String name){
+       this.name = name;
+       this.birthDate = null;
+       this.id = 0;
+
+   }
 
     public Mammal(String name, Date birthDate, Integer id) {
         this.name = name;
@@ -20,6 +27,7 @@ public abstract class Mammal implements Animal {
         this.eatenMeals = new ArrayList<>();
         this.id = id;
     }
+
 
     public String getName() {
         return name;
