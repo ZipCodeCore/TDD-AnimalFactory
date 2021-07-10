@@ -11,7 +11,7 @@ public class Dog extends Mammal {
 
     public Dog(String name) { super(name); }
 
-    public Dog(Date birthdate) { super(birthDate); }
+    public Dog(Date birthDate) { super(birthDate); }
 
     public String speak() {
         return "bark!";
