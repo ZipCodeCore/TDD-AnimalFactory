@@ -6,6 +6,7 @@ import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
 import rocks.zipcodewilmington.animals.animal_creation.AnimalFactory;
 import rocks.zipcodewilmington.animals.animal_storage.CatHouse;
+import rocks.zipcodewilmington.animals.animal_storage.CatHouse;
 
 import java.util.Date;
 
@@ -14,26 +15,67 @@ import java.util.Date;
  */
 public class CatHouseTest {
 
-    // TODO - Create tests for `void remove(Integer id)`
-    // TODO - Create tests for `void remove(Cat cat)`
-    // TODO - Create tests for `Cat getCatById(Integer id)`
-
-
-//    @Test
-//    public void getCatByIdTest() {
-//        //Given
-//        String givenName = "Chaco";
-//        Cat cat = new Cat ();
-//
-//        //When
-//        Cat actual = CatHouse.getCatById(givenId);
-//
-//        //Then
-//        Assert.assertEquals(cat, actual);
-//    }
-
     // TODO - Create tests for `void add(Cat cat)`
 
+    @Test
+    public void addCatTest() {
+        //Given
+        Cat addCat = AnimalFactory.createCat("Mr.Bigglesworth", null);
+
+        //When
+        CatHouse.add(addCat);
+        int actual = CatHouse.getNumberOfCats();
+
+        //Then
+        Assert.assertEquals(2, actual);
+    }
+
+    // TODO - Create tests for `void remove(Cat cat)`
+
+    @Test
+    public void removeCatTest(){
+        //Given
+        Cat catToBeRemoved = new Cat("Luna", null, 1);
+
+        //When
+        CatHouse.remove(catToBeRemoved);
+
+
+        //Then
+        int actual = CatHouse.getNumberOfCats();
+        Assert.assertEquals(1, actual);
+    }
+
+    // TODO - Create tests for `void remove(Integer id)`
+
+    @Test
+    public void removeIntegerCatTest(){
+        //Given
+        CatHouse catHouse = new CatHouse();
+
+        //When
+        catHouse.remove(1);
+
+
+        //Then
+        int actual = CatHouse.getNumberOfCats();
+        Assert.assertEquals(1, actual);
+    }
+
+    // TODO - Create tests for `Cat getCatById(Integer id)`
+
+    @Test
+    public void getCatByIdTest() {
+        //Given
+        Cat catId = new Cat ("Chaco", null, 0);
+
+        //When
+        Integer actual = catId.getId();
+        Integer expected = 0;
+
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
 
     // TODO - Create tests for `Integer getNumberOfCats()`
 
@@ -51,8 +93,6 @@ public class CatHouseTest {
         // Then
         CatHouse.getNumberOfCats();
     }
-
-
 
 
 
