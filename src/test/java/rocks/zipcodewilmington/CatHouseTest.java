@@ -3,7 +3,9 @@ package rocks.zipcodewilmington;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.animal_creation.AnimalFactory;
+import rocks.zipcodewilmington.animals.animal_storage.CatHouse;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -13,10 +15,11 @@ public class CatHouseTest {
     // TODO - Create tests for `void add(Cat cat)`
     @Test
     public void testAddCat(){
-        String expectedName = "McKayla";
-        Date expectedBirthDate = new Date();
-        Cat newCat =  AnimalFactory.createCat(expectedName,expectedBirthDate);
-
+        //given
+        Cat newCat =  AnimalFactory.createCat("Mckayla",new Date(2019, Calendar.JANUARY,1),1);
+        CatHouse.clear();
+        //then
+        CatHouse.addCat(newCat);
     }
     // TODO - Create tests for `void remove(Integer id)`
     @Test
