@@ -18,6 +18,7 @@ public class DogHouseTest {
     public void testAddDog(){
         //given
         Dog expected = new Dog("Eleanor",new Date(),1);
+        DogHouse.clear();
         //when
         DogHouse.add(expected);
         Dog actual = DogHouse.getDogById(1);
@@ -32,6 +33,7 @@ public class DogHouseTest {
         //given
         Dog expected = null;
         Dog newDog = new Dog("Eleanor",new Date(),1);
+        DogHouse.clear();
         DogHouse.add(newDog);
         //when
         DogHouse.remove(1);
@@ -45,6 +47,7 @@ public class DogHouseTest {
         //given
         Dog expected = null;
         Dog newDog = new Dog("Ulysses",new Date(),1);
+        DogHouse.clear();
         DogHouse.add(newDog);
         //when
         DogHouse.remove(newDog);
@@ -57,6 +60,7 @@ public class DogHouseTest {
     public void testGetDogById(){
         //given
         Dog expected = new Dog("Anthony",new Date(),1);
+        DogHouse.clear();
         DogHouse.add(expected);
         //when
         Dog actual = DogHouse.getDogById(1);

@@ -30,6 +30,7 @@ public class CatHouseTest {
     public void testRemoveByID(){
         //given
         Cat newCat =  new Cat("Roberto",new Date(2019, Calendar.JANUARY,1),1);
+        CatHouse.clear();
         CatHouse.add(newCat);
         Cat expected = null;
         //when
@@ -45,6 +46,7 @@ public class CatHouseTest {
     public void testRemoveByCat(){
         //given
         Cat newCat = new Cat("Elijah",new Date(2019, Calendar.JANUARY,1),1);
+        CatHouse.clear();
         CatHouse.add(newCat);
         Cat expected = null;
         //when
@@ -59,6 +61,7 @@ public class CatHouseTest {
     public void testGetCatById(){
         //given
         Cat expected = new Cat("Yolanda",new Date(2019, Calendar.JANUARY,1),1);
+        CatHouse.clear();
         CatHouse.add(expected);
         //when
         Cat actual = CatHouse.getCatById(1);
@@ -70,6 +73,7 @@ public class CatHouseTest {
     public void testGetNumberOfCats(){
         //given
         Cat newCat = new Cat("Archimedes",new Date(2019, Calendar.JANUARY,1),1);
+        CatHouse.clear();
         CatHouse.add(newCat);
         Integer expected = 1;
         //when
