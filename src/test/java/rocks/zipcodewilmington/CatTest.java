@@ -42,7 +42,7 @@ public class CatTest {
     public void testSetBirthDate(){
         //given
         Cat originalCat = AnimalFactory.createCat("Penelope",new Date(2009, Calendar.FEBRUARY,3));
-        Date expected = new Date(1919, 8,14);
+        Date expected = new Date(1919, Calendar.SEPTEMBER,14);
         //when
         originalCat.setBirthDate(expected);
         Date actual = originalCat.getBirthDate();
@@ -53,19 +53,19 @@ public class CatTest {
     @Test
     public void testEat(){
         //given
-        Cat originalCat = AnimalFactory.createCat("Olivia",new Date(2005, Calendar.AUGUST,3));
+        Cat originalCat = AnimalFactory.createCat("Ichabod",new Date(2005, Calendar.AUGUST,3));
         int expected = 1;
         //when
         originalCat.eat(new Food());
-        //then
         int actual = originalCat.getNumberOfMealsEaten();
+        //then
         Assert.assertEquals(expected, actual);
     }
     // TODO - Create tests for `Integer getId()`
     @Test
     public void testGetId(){
         //given
-        Cat originalCat = new Cat("Angela",new Date(1945, Calendar.AUGUST,3),3);
+        Cat originalCat = new Cat("Horatio",new Date(1945, Calendar.AUGUST,3),3);
         int expected = 3;
         //when
         int actual = originalCat.getId();
@@ -84,7 +84,7 @@ public class CatTest {
     @Test
     public void testMammalInheritance(){
         //given //when
-        Cat originalCat = new Cat("Angelo",new Date(1975, Calendar.AUGUST,3),3);
+        Cat originalCat = new Cat("Chrysanthemum",new Date(1975, Calendar.AUGUST,3),3);
         //then
         Assert.assertTrue(originalCat instanceof Mammal);
     }

@@ -20,8 +20,8 @@ public class DogTest {
         String givenName = "Harrison";
         Date givenDate = new Date();
         int givenId = 1;
-        Dog dog = new Dog (givenName,givenDate,givenId);
         //when
+        Dog dog = new Dog (givenName,givenDate,givenId);
         String actualName = dog.getName();
         Date actualDate = dog.getBirthDate();
         int actualId = dog.getId();
@@ -82,7 +82,7 @@ public class DogTest {
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
     @Test
     public void testAnimalInheritance(){
-        //given/when
+        //given //when
         Dog dog = new Dog ("Mercurio",new Date(),5);
         //then
         Assert.assertTrue(dog instanceof Animal);
@@ -90,7 +90,7 @@ public class DogTest {
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
     @Test
     public void testMammalInheritance(){
-        //given/when
+        //given //when
         Dog dog = new Dog ("Alexandria",new Date(),5);
         //then
         Assert.assertTrue(dog instanceof Mammal);

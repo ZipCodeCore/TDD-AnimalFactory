@@ -7,6 +7,7 @@ import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
 import rocks.zipcodewilmington.animals.animal_creation.AnimalFactory;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -18,10 +19,10 @@ public class AnimalFactoryTest {
     public void testCreateDog(){
         //given
         String expectedName = "Samantha";
-        Date expectedBirthDate = new Date(2000,4,4);
+        Date expectedBirthDate = new Date(2000, Calendar.MAY,4);
         //should this be type animal?
-        Dog newDog = AnimalFactory.createDog(expectedName,expectedBirthDate);
         //when
+        Dog newDog = AnimalFactory.createDog(expectedName,expectedBirthDate);
         String actualName = newDog.getName();
         Date actualBirthDate = newDog.getBirthDate();
         //then
@@ -34,9 +35,9 @@ public class AnimalFactoryTest {
     public void testCreateCat(){
         //given
         String expectedName = "Rutherford";
-        Date expectedBirthDate = new Date(2019,3,8);
-        Cat newCat =  AnimalFactory.createCat(expectedName,expectedBirthDate);
+        Date expectedBirthDate = new Date(2019, Calendar.APRIL,8);
         //when
+        Cat newCat =  AnimalFactory.createCat(expectedName,expectedBirthDate);
         String actualName = newCat.getName();
         Date actualBirthDate = newCat.getBirthDate();
         //then
