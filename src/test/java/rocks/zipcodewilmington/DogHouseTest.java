@@ -36,7 +36,7 @@ public class DogHouseTest {
         DogHouse.add(dog);
         Integer expected = null;
         //When
-        DogHouse.removeId(123);
+        DogHouse.remove(123);
         Dog actual = DogHouse.getDogById(123);
         //Then
        Assert.assertEquals(expected, actual);
