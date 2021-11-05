@@ -130,6 +130,7 @@ public class DogTest {
         Assert.assertEquals(expected,actual);
 
     }
+    @Test
     public void testGetId2(){
         //given
         Dog dog = new Dog ("Agdalene",new Date(2, Calendar.APRIL,5),99);
