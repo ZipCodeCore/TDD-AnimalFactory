@@ -38,6 +38,11 @@ public abstract class Mammal implements Animal {
     }
 
 
+    @Override
+    public String speak() {
+        return null;
+    }
+
     public Integer getNumberOfMealsEaten() {
         return eatenMeals.size();
     }
