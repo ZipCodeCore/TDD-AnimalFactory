@@ -1,4 +1,9 @@
 # TDD-AnimalFactory
+
+__this is a pretty big lab. important to get it done.__
+
+_remember, make your last commit message "finished" after you have fogured it all out_
+
 * **Objective:**
     * To create tests that ensure expected behavior of each class:
         * Cat
@@ -12,6 +17,8 @@
 	* Click [here](https://github.com/Zipcoder/TDD-AnimalFactory/blob/master/README-TDDPatterns.md) to gain more familiarity with TDD-structured programming.
 
 ## Getting Started
+
+* You probably already have IntelliJ installed, right?
 * Begin by opening the project via its `pom.xml` with IntelliJ.
     * [How do I install IntelliJ](https://github.com/Zipcoder/Maven.TDD-AnimalFactory/blob/master/README-InstallingIntelliJ.md)?
 * Continue by opening the `test.java.rocks.zipcodewilmington` package and completing each of the `TODO`s.
@@ -79,3 +86,6 @@
 * Create tests for `Integer getNumberOfDogs()`
     * ensure that when `.getNumberOfDogs()` is invoked on the `DogHouse`, the respective number of `Dog` objects is returned.
 
+## Now...
+
+_Why is this lab important?_
