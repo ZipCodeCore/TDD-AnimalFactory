@@ -96,5 +96,5 @@ Java inheritance makes things easier for a programmer by allowing them to reuse 
 
 By using inheritance, programmers can create a hierarchy of classes that share common properties and behaviors. This can make the code easier to understand and maintain, as changes made to the superclass will automatically be inherited by the subclasses. In addition, inheritance can help to reduce code duplication, as common properties and behaviors can be defined in the superclass and reused by the subclasses.
 
-Inheritance also allows for polymorphism, which is the ability of objects to take on multiple forms. This means that a subclass can be treated as an instance of its superclass, which can make the code more flexible and adaptable to changing requirements. For example, a program that uses inheritance can easily add new subclasses without having to modify the existing code.
+Inheritance also allows for __polymorphism__, which is the ability of objects to take on multiple forms. This means that a subclass can be treated as an instance of its superclass, which can make the code more flexible and adaptable to changing requirements. For example, a program that uses inheritance can easily add new subclasses without having to modify the existing code.
 
