@@ -2,7 +2,7 @@
 
 __this is a pretty big lab. important to get it done.__
 
-_remember, make your last commit message "finished" after you have fogured it all out_
+_remember, make your last commit message "finished" after you have figured it all out_
 
 * **Objective:**
     * To create tests that ensure expected behavior of each class:
