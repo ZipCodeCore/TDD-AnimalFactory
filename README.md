@@ -89,3 +89,12 @@ _remember, make your last commit message "finished" after you have figured it al
 ## Now...
 
 _Why is this lab important?_
+
+## Java Inheritance
+
+Java inheritance makes things easier for a programmer by allowing them to reuse code and create more flexible and modular programs. Inheritance allows a subclass to inherit properties and methods from a superclass, which can save time and effort when writing code.
+
+By using inheritance, programmers can create a hierarchy of classes that share common properties and behaviors. This can make the code easier to understand and maintain, as changes made to the superclass will automatically be inherited by the subclasses. In addition, inheritance can help to reduce code duplication, as common properties and behaviors can be defined in the superclass and reused by the subclasses.
+
+Inheritance also allows for polymorphism, which is the ability of objects to take on multiple forms. This means that a subclass can be treated as an instance of its superclass, which can make the code more flexible and adaptable to changing requirements. For example, a program that uses inheritance can easily add new subclasses without having to modify the existing code.
+
