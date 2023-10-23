@@ -1,8 +1,11 @@
 package rocks.zipcodewilmington;
 
+import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
 import rocks.zipcodewilmington.animals.animal_creation.AnimalFactory;
+import rocks.zipcodewilmington.animals.animal_storage.CatHouse;
 import rocks.zipcodewilmington.animals.animal_storage.DogHouse;
 
 import java.util.Date;
@@ -30,5 +33,87 @@ public class DogHouseTest {
 
         // Then
         DogHouse.getNumberOfDogs();
+        //System.out.println(DogHouse.getNumberOfDogs());
+    }
+
+
+    @Test
+    public void DogAddTest() {
+        //GIVEN
+        DogHouse.clear();
+
+        //WHEN
+        Dog doggo = AnimalFactory.createDog("ggg", null);
+        DogHouse.add(doggo);
+        int expected = 1;
+
+        int actual = DogHouse.getNumberOfDogs();
+        //THEN
+        Assert.assertEquals(1, actual);
+
+
+    }
+
+    @Test
+    public void DogRemoveTest() {
+        //GIVEN
+        DogHouse.clear();
+
+
+        //WHEN
+        Dog nodog = new Dog(null, null, null);
+        DogHouse.add(nodog);
+        DogHouse.remove(nodog);
+
+        int actual = DogHouse.getNumberOfDogs();
+
+        //THEN
+        Assert.assertEquals(0, actual);
+
+    }
+
+    @Test
+    public void removebyId() {
+        //GIVEN
+       DogHouse.clear();
+
+        //WHEN
+        Dog dog = new Dog(null, null, 0);
+        DogHouse.add(dog);
+        DogHouse.remove(dog.getId());
+        int actual = dog.getId();
+        //int expected = 0;
+
+        //THEN
+        Assert.assertEquals(0, actual);
+
+    }
+
+    @Test
+    public void getNumberOfCats() {
+        //GIVEN
+        String givenName = "perro";
+        Date givenBirthDate = new Date();
+        Integer givenId = 6;
+        Dog dog = new Dog("perro", null, 6); //tambien works w/ givenName, givenBirthDate...
+        DogHouse.add(dog);
+
+        //WHEN
+        Dog actual = DogHouse.getDogById(givenId);
+
+
+        //THEN
+        Assert.assertEquals(dog, actual);
+
+
     }
 }
+
+
+
+
+
+
+
+
+
