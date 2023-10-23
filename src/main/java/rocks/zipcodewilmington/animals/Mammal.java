@@ -22,7 +22,7 @@ public abstract class Mammal implements Animal {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -50,4 +50,10 @@ public abstract class Mammal implements Animal {
     public Integer getId() {
         return id;
     }
+
+    public Food getLastMealEaten(){
+        int lastIndex = eatenMeals.size() - 1;
+        return eatenMeals.get(lastIndex);
+    };
+
 }
