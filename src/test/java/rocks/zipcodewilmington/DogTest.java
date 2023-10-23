@@ -2,7 +2,12 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Animal;
+import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
+import rocks.zipcodewilmington.animals.Mammal;
+
+import java.util.Date;
 
 /**
  * @author leon on 4/19/18.
@@ -27,5 +32,102 @@ public class DogTest {
         // Then (we expect to get the given name from the dog)
         String dogName = dog.getName();
         Assert.assertEquals(dogName, givenName);
+    }
+
+    @Test
+    public void speakTest() {
+        //given
+        String dogName = "Milo";
+        Date birthDay = new Date();
+        Integer givenId = 0;
+        Dog dog = new Dog(dogName,birthDay,0);
+
+        //when
+        String dogSpeak = dog.speak();
+
+        //then
+
+        Assert.assertEquals("bark!", dogSpeak);
+
+    }
+
+    @Test
+    public void setBirthDate(){
+        //given
+        String dogName = "Milo";
+        Date birthDay = new Date(1993, 8, 2);
+        Integer givenId = 0;
+        Dog dog = new Dog(dogName,birthDay,0);
+
+
+        //when
+        dog.setBirthDate(birthDay);
+
+        //then
+        Assert.assertEquals(birthDay, birthDay);
+
+    }
+
+    @Test
+    public void eatTest(){
+        //given
+        String dogName = "Milo";
+        Date birthDay = new Date();
+        Integer givenId = 0;
+        Food actualFood = new Food();
+        Dog dog = new Dog(dogName,birthDay,0);
+
+        //when
+        dog.eat(actualFood);
+        int mealsEaten = dog.getNumberOfMealsEaten();
+
+        //then
+        Assert.assertEquals(1, mealsEaten);
+
+    }
+
+    @Test
+    public void getIdTest() {
+        //given
+        String dogName = "Milo";
+        Date birthDay = new Date();
+        Integer givenId = 0;
+        Dog dog = new Dog(dogName,birthDay,0);
+
+        //when
+        int id = dog.getId();
+
+        //then
+        Assert.assertEquals(givenId, dog.getId());
+    }
+
+    @Test
+    public void animalInheritanceTest() {
+        //given
+        String dogName = "Milo";
+        Date birthDay = new Date();
+        Integer givenId = 0;
+
+
+        //when
+        Dog dog = new Dog(dogName,birthDay,0);
+
+        //then
+        Assert.assertTrue(dog instanceof Animal);
+    }
+
+    @Test
+    public void mammalInheritanceTest() {
+        //given
+        String dogName = "Mil0";
+        Date birthDay = new Date();
+        Integer givenId = 0;
+
+
+        //when
+        Dog dog = new Dog(dogName,birthDay,0);
+
+        //then
+        Assert.assertTrue(dog instanceof Mammal);
     }
 }
