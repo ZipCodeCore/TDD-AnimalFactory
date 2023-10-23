@@ -21,6 +21,18 @@ public abstract class Mammal implements Animal {
         this.id = id;
     }
 
+    public Mammal(String name) {
+        this.name = name;
+        this.birthDate = null;
+        this.id = 0;
+    }
+
+    public Mammal(Date birthDate) {
+        this.name = "";
+        this.birthDate = birthDate;
+        this.id = 0;
+    }
+
     public String getName() {
         return name;
     }
@@ -36,7 +48,6 @@ public abstract class Mammal implements Animal {
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
-
 
     public Integer getNumberOfMealsEaten() {
         return eatenMeals.size();

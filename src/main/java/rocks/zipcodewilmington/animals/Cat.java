@@ -6,11 +6,19 @@ import java.util.Date;
  * @author leon on 4/19/18.
  */
 public class Cat extends Mammal {
+
     public Cat(String name, Date birthDate, Integer id) {
         super(name, birthDate, id);
+    }
+
+    public Cat (String name) { super(name); }
+
+    public Cat(Date birthDate) {
+        super(birthDate);
     }
 
     public String speak() {
         return "meow!";
     }
+
 }
