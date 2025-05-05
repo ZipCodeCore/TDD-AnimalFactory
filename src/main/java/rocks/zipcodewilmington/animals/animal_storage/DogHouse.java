@@ -9,6 +9,7 @@ public class DogHouse {
     private static AnimalWarehouse<Dog> dogHouse = new AnimalWarehouse<>();
 
     public static void add(Dog dog) {
+
         dogHouse.add(dog);
     }
 
@@ -17,14 +18,17 @@ public class DogHouse {
     }
 
     public static void remove(Dog dog) {
+
         dogHouse.removeAnimal(dog);
     }
 
     public static Dog getDogById(Integer id) {
+
         return dogHouse.getAnimalById(id);
     }
 
     public static Integer getNumberOfDogs() {
+
         return dogHouse.getNumberOfAnimals();
     }
 
