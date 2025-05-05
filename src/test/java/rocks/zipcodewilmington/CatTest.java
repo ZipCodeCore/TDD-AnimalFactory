@@ -2,7 +2,10 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Cat;
+import rocks.zipcodewilmington.animals.Dog;
+import rocks.zipcodewilmington.animals.Mammal;
 
 import java.util.Date;
 
@@ -40,4 +43,63 @@ public class CatTest {
         Assert.assertEquals(givenId, retrievedId);
     }
 
+    @Test
+    public void setNameTest() {
+        // Given (a name exists and a dog exists)
+        Cat cat = new Cat(null, null, null);
+        String givenName = "Milo";
+
+        // When (a dog's name is set to the given name)
+        cat.setName(givenName);
+
+        // Then (we expect to get the given name from the dog)
+        String catName = cat.getName();
+        Assert.assertEquals(catName, givenName);
+    }
+
+    @Test
+    public void speakTest () {
+        String speakTest = "meow!";
+        Cat cat = new Cat(null, null, null);
+
+        Assert.assertEquals(speakTest, cat.speak());
+    }
+
+    @Test
+    public void setBirthDateTest () {
+        Date birthDate = new Date();
+        Cat cat = new Cat(null, birthDate, null);
+        Date actualBirthDate = cat.getBirthDate();
+
+        Assert.assertEquals(birthDate, actualBirthDate);
+    }
+
+    @Test
+    public void eatTest() {
+        Food food = new Food();
+        Cat cat = new Cat(null,null,null);
+        cat.eat(food);
+
+        Food lastMealEaten = cat.getLastMealEaten();
+        Assert.assertEquals(lastMealEaten, food);
+    }
+
+    @Test
+    public void getIdTest () {
+        Cat cat = new Cat(null, new Date(), 10);
+        Integer actualId = cat.getId();
+        Assert.assertEquals(actualId, 10, 0);
+    }
+
+    @Test
+    public void checkInheritanceAnimal () {
+        Cat cat = new Cat("Nathanial", new Date(), 13);
+        Assert.assertTrue(cat instanceof Animal);
+    }
+
+    @Test
+    public void checkInheritanceMammal () {
+        Cat cat = new Cat("Trash", new Date(), 69);
+        Assert.assertTrue(cat instanceof Mammal);
+    }
 }
